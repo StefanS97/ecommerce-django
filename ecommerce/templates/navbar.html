@@ -1,12 +1,11 @@
-  {% load cart_template_tags %}
+{% load cart_template_tags %}
 
-  <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
 
       <!-- Brand -->
       <a class="navbar-brand waves-effect" href="/">
-        <strong class="blue-text">E-Commerce</strong>
+        <strong class="blue-text">DJe-commerce</strong>
       </a>
 
       <!-- Collapse -->
@@ -20,6 +19,15 @@
 
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
+          {% comment %} <li class="nav-item active">
+            <a class="nav-link waves-effect" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="/checkout">
+            Checkout</a>
+          </li> {% endcomment %}
         </ul>
 
         <!-- Right -->
@@ -50,9 +58,7 @@
           </li>
           {% endif %}
         </ul>
-
       </div>
 
     </div>
   </nav>
-  <!-- Navbar -->

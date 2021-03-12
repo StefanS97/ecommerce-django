@@ -8,8 +8,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')b$-hde5(770h&l$+jv2#2&8n&xfwox6he%28o_ztadl1$v3$v'
+SECRET_KEY = '#'
 
+STRIPE_PUBLIC_KEY = '#'
+STRIPE_SECRET_KEY = '#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -30,6 +32,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
+    'django_countries',
     'products',
 ]
 
@@ -113,6 +116,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 
 
 AUTHENTICATION_BACKENDS = [

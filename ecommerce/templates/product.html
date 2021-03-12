@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
-  <!--Main layout-->
+
   <main class="mt-5 pt-4">
     <div class="container dark-grey-text mt-5">
 
@@ -43,17 +43,21 @@
 
             <p>{{ object.description }}</p>
 
-            <!-- <form class="d-flex justify-content-left">
+            {% comment %} <form class="d-flex justify-content-left">
+              <!-- Default input -->
               <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-              <button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
+              <button class="btn btn-primary btn-md my-0 p" type="submit">
+                Add to cart
                 <i class="fas fa-shopping-cart ml-1"></i>
               </button>
-            </form> -->
 
-            <a href="{{ object.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p">Add to cart
+            </form> {% endcomment %}
+            <a href="{{ object.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p">
+              Add to cart
               <i class="fas fa-shopping-cart ml-1"></i>
             </a>
-            <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p">Remove from cart
+            <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p">
+              Remove from cart
             </a>
 
           </div>
@@ -117,5 +121,5 @@
 
     </div>
   </main>
-  <!--Main layout-->
-{% endblock %}
+
+{% endblock content %}
